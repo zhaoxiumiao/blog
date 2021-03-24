@@ -1,7 +1,7 @@
-const querystring = require('querystring')
-const {set,get} = require('./src/db/redis')
-const handleBlogRouter = require('./src/router/blog')
-const handleUserRouter = require('./src/router/user')
+const querystring = require('querystring')//用于解析query
+const {set,get} = require('./src/db/redis')//用于存储redis
+const handleBlogRouter = require('./src/router/blog')//用于处理blog路由
+const handleUserRouter = require('./src/router/user')//用于处理user路由
 
 //获取cookie的过期时间
 const getCookieExpires = () => {
@@ -12,7 +12,6 @@ const getCookieExpires = () => {
 
 //session 数据
 const SESSION_DATA ={}
-let a = 1
 
 // 用于处理post data
 const getPostData = (req) =>{
